@@ -15,12 +15,15 @@ function draw() {
   drawToScreen();
 }
 
+// In this function, you update game objects to make things happen over time.
 function updateGame() {
 
 }
 
+// In this function, you draw game objects to the screen.
 function drawToScreen() {
-
+  setDefaultColors();
+  background("black");
 }
 
 // Can ignore the rest of the code after this line.
@@ -32,12 +35,15 @@ function setDrawColor(color) {
 }
 
 function setDefaultColors() {
-  fill("white");
-  stroke("white");
+  setDrawColor("white");
 }
 
 function randomNumberBetween(min, max) {
   return Math.random() * (max - min) + min;
+}
+
+function power(base, exponent) {
+  return Math.pow(base, exponent);
 }
 
 let SPACEBAR = 32;

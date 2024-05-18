@@ -59,6 +59,14 @@ function updateGame() {
   } else if (keyIsDown(RIGHT_ARROW)) {
     ship_x = ship_x + 3;
   }
+
+  if (keyIsDown(SPACEBAR)) {
+    if (laser === false) {
+      laser_x = ship_x;
+      laser_y = ship_y;
+      laser = true;
+    }
+  }
   // End section.
 
   // Section: Make time move forward.
